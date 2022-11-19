@@ -11,3 +11,15 @@ color: black;
 border: 4px solid black;
 border-radius: 17px;   
 }
+.search-container{
+background-color: var(--btn-color); 
+color: black;
+border: 4px solid black;
+border-radius: 17px; 
+height: 100px;
+width: 80px;
+margin-top: 75px;
+}
+.button{
+
+}
