@@ -21,5 +21,12 @@ width: 80px;
 margin-top: 75px;
 }
 .button{
-
+background-color: var(--btn-color); 
+color: black;
+border: 2px solid black;
+border-radius: 10px; 
+}
+.text-area{
+border: 2px solid black;
+border-radius: 10px; 
 }
