@@ -1,5 +1,5 @@
 // API key
-const apiKey = '338d1628f784e2c0c339e4ade3ce2735';
+const apiKey = '19af75ad2faedb9fa29ead47a916729d';
 
 // needed for search 
 let city = '';
@@ -9,3 +9,7 @@ let lon;
 
 // API
 const queryUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=imperial&appid=' + apiKey;
+
+// search history
+var searchHistory = [];
+
