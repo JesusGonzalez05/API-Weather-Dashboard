@@ -22,6 +22,7 @@ $("#search-submit").click(function () {
     fetchCordinates(search);
     searchedInput.value = "";
 });
+
 //  API Fetch 
 function fetchCordinates(search) {
     // API URL
@@ -45,7 +46,46 @@ function fetchWeather(location) {
     // Fetches the requested data then jsons the response
     fetch(requestURL)
       .then((response) => response.json())
-      .then((data) => console.log(location.name, data));
+      .then((data) => renderData(location.name, data));
 
     }
+
+// function to handle the data and send to appropriate functions
+function renderData(city, data) {
+    CurrentWeather(city, data.list[0]);
+    // Forecast(data.list);
+}
+
+// displays the current weather data
+function CurrentWeather(city, weather) {
+    var temp = weather.main.temp;
+    var wind = weather.wind.speed;
+    var humidity = weather.main.humidity;
+    var todaysDate = moment(weather.dt_txt).format("M/D/YY");
   
+    var cardBodyEl = todaysWeatherEl.find(".card-body");
+    cardBodyEl.empty();
+    cardBodyEl.append(
+
+   `<div class="searched-city container text-center>
+      <div id="todays-weather" class="card mb-4">
+
+          <div class="card-body">   
+          <h2>${city} (${todaysDate})</h2>
+          <p>Temp: ${temp}°F</p> 
+          <p>Wind: ${wind} MPH</p>
+          <p>Humidity: ${humidity} %</p>
+          </div>
+
+      </div>
+
+      <!-- 5 day forecast -->
+      <div class="container-fluid">
+
+          <div id="week-forecast" class="card-deck d-flex justify-content-around">
+          </div>
+
+      </div>
+    </div>`
+    );
+  }
