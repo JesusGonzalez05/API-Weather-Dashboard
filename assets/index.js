@@ -22,3 +22,17 @@ $("#search-submit").click(function () {
     fetchCordinates(search);
     searchedInput.value = "";
 });
+//  API Fetch 
+function fetchCordinates(search) {
+    // API URL
+    var requestURL = `http://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=1&appid=${APIkey}`;
+  
+    // Fetches the requested data then jsons the response
+    fetch(requestURL)
+      .then((response) => response.json())
+      .then((data) => {
+        // render out latitude and longitude in console
+        console.log(data[0]);
+      });
+}
+
