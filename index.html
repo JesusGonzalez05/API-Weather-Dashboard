@@ -24,11 +24,10 @@
             <!-- Search for City -->
             <div >
                 <h3>Search for City:</h3>
-                <form>
+                <div>
                     <input class="text" id="search-input" type="text" autofocus="true" />
-                    <button class="button" id="search-submit" type="submit">Search</button>
-                    <button class="button" id="clear-history" type="submit">Clear</button>
-                </form>
+                    <button class="button" id="search-submit">Search</button>
+                </div>
             </div>
 
             <!-- Saved searches -->
@@ -42,12 +41,18 @@
         <div>
 
             <!-- Todays forecast -->
-            <div>
-            </div>
+      <div style="width: 80%">
+        <div id="todays-weather" class="card mb-4">
+          <div class="card-body"></div>
+        </div>
 
             <!-- 5 day forecast -->
-            <div>
-            </div>
+            <div class="container-fluid">
+                <div
+                  id="week-forecast"
+                  class="card-deck d-flex justify-content-around"
+                ></div>
+              </div>
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
