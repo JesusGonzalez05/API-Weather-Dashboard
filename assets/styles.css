@@ -39,3 +39,16 @@ height: 210px;
 max-width: 200px;
 margin-top: 75px;
 }
+.week-forecast{
+background-color: var(--btn-color); 
+color: black;
+border: 4px solid black;
+border-radius: 17px; 
+height: 202px;
+max-width: 192px;
+margin-top: 75px;  
+}
+.week-container{
+display: flex;
+flex-direction: row;
+}

@@ -39,6 +39,7 @@ function fetchCordinates(search) {
       });
 }
 
+//  API Fetch 
 function fetchWeather(location) {
     // API URL
     var requestURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${location.lat}&lon=${location.lon}&appid=${APIkey}&units=imperial`;
@@ -77,16 +78,7 @@ function CurrentWeather(city, weather) {
           <p>Humidity: ${humidity} %</p>
           </div>
 
-      </div>
-
-      <!-- 5 day forecast -->
-      <div class="container-fluid">
-
-          <div id="week-forecast" class="card-deck d-flex justify-content-around">
-          </div>
-
-      </div>
-    </div>`
+      </div>`
     );
   }
 
@@ -118,10 +110,9 @@ function renderForecast(forecast) {
     cardBodyEl.append(
 
         `   <!-- 5 day forecast -->
-            <div class="searched-city container-fluid">
 
-                <div id="week-forecast" class="card-deck d-flex justify-content-around">
-                <div class="card-body">   
+                <div id="week-forecast" class="week-forecast">
+                <div id="week-forecast" class="card-body">   
                 <h2>(${todaysDate})</h2>
                 <p>Temp: ${temp}°F</p> 
                 <p>Wind: ${wind} MPH</p>
@@ -129,10 +120,8 @@ function renderForecast(forecast) {
                 </div>
                 </div>
 
-            </div>
-        </div>`
+            
+        `
   );
-   
-  
     weeklyForecastEl.append(card);
   }
