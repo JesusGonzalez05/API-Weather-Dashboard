@@ -53,7 +53,7 @@ function fetchWeather(location) {
 // function to handle the data and send to appropriate functions
 function renderData(city, data) {
     CurrentWeather(city, data.list[0]);
-    // Forecast(data.list);
+    fiveDayForecast(data.list);
 }
 
 // displays the current weather data
@@ -96,5 +96,43 @@ function fiveDayForecast(dailyForecast) {
     for (var i = 0; i < dailyForecast.length; i++) {
       // sends to function that will render data
       renderForecast(dailyForecast[i]);
+    };
+  };
+
+// Function to display a forecast card given an object from open weather api
+function renderForecast(forecast) {
+    if (moment(forecast.dt_txt).hour() !== 12) {
+      return;
     }
+  
+    var card = $(
+      `<div class="container text-center"><div class="card-body"></div></div>`
+    );
+    var cardBodyEl = card.find(".card-body");
+  
+    var temp = forecast.main.temp;
+    var wind = forecast.wind.speed;
+    var humidity = forecast.main.humidity;
+    var todaysDate = moment(forecast.dt_txt).format("M/D/YY");
+  
+    cardBodyEl.append(
+
+        `   <!-- 5 day forecast -->
+            <div class="searched-city container-fluid">
+
+                <div id="week-forecast" class="card-deck d-flex justify-content-around">
+                <div class="card-body">   
+                <h2>(${todaysDate})</h2>
+                <p>Temp: ${temp}°F</p> 
+                <p>Wind: ${wind} MPH</p>
+                <p>Humidity: ${humidity} %</p>
+                </div>
+                </div>
+
+            </div>
+        </div>`
+  );
+   
+  
+    weeklyForecastEl.append(card);
   }
