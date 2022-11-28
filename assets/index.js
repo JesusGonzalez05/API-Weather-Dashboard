@@ -22,7 +22,26 @@ $("#search-submit").click(function () {
     fetchCordinates(search);
     searchedInput.value = "";
     localStorage.setItem('history', search);
+    searchHistory.push(search);
+    renderSearchHistory();
+    // console.log(searchHistory)
+
 });
+
+function renderSearchHistory() {
+    // empty the search history container
+    searchHistoryEl.empty();
+    // loop through the history array creating a button for each item
+    for (let index = 0; index < searchHistory.length; index++) {
+      var buttonEl = $(
+        `<button class="btn history-btn">${searchHistory[index]}</button>`
+      );
+      searchHistoryEl.append(buttonEl);
+      buttonEl.click(function () {
+        fetchCordinates(searchHistory[index]);
+      });
+    }
+  }
 
 //  API Fetch 
 function fetchCordinates(search) {
