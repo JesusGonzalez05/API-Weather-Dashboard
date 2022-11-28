@@ -21,6 +21,7 @@ $("#search-submit").click(function () {
     var search = searchedInput.val().trim();
     fetchCordinates(search);
     searchedInput.value = "";
+    localStorage.setItem('history', search);
 });
 
 //  API Fetch 
@@ -78,7 +79,8 @@ function CurrentWeather(city, weather) {
           <p>Humidity: ${humidity} %</p>
           </div>
 
-      </div>`
+      </div>
+      `
     );
   }
 
@@ -109,18 +111,15 @@ function renderForecast(forecast) {
   
     cardBodyEl.append(
 
-        `   <!-- 5 day forecast -->
-
-                <div id="week-forecast" class="week-forecast d-flex flex-row justify-content-center">
-                <div id="week-forecast" class="card-body">   
-                <h2>(${todaysDate})</h2>
-                <p>Temp: ${temp}°F</p> 
-                <p>Wind: ${wind} MPH</p>
-                <p>Humidity: ${humidity} %</p>
-                </div>
-                </div>
-
-            
+        `
+        <div id="week-forecast" class="week-forecast d-flex flex-row justify-content-center">
+        <div id="week-forecast" class="card-body">   
+        <h2>(${todaysDate})</h2>
+        <p>Temp: ${temp}°F</p> 
+        <p>Wind: ${wind} MPH</p>
+        <p>Humidity: ${humidity} %</p>
+        </div>
+        </div>
         `
   );
     weeklyForecastEl.append(card);
