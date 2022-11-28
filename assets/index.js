@@ -29,12 +29,12 @@ $("#search-submit").click(function () {
 });
 
 function renderSearchHistory() {
-    // empty the search history container
+    // clears history
     searchHistoryEl.empty();
-    // loop through the history array creating a button for each item
+    // loop throughs local storage and renders searchHistory []
     for (let index = 0; index < searchHistory.length; index++) {
       var buttonEl = $(
-        `<button class="btn history-btn">${searchHistory[index]}</button>`
+        `<button class="history-btn">${searchHistory[index]}</button>`
       );
       searchHistoryEl.append(buttonEl);
       buttonEl.click(function () {
