@@ -89,3 +89,12 @@ function CurrentWeather(city, weather) {
     </div>`
     );
   }
+
+// Function to display 5 day forecast.
+function fiveDayForecast(dailyForecast) {
+    weeklyForecastEl.empty();
+    for (var i = 0; i < dailyForecast.length; i++) {
+      // sends to function that will render data
+      renderForecast(dailyForecast[i]);
+    }
+  }
