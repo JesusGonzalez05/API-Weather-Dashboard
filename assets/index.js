@@ -111,7 +111,7 @@ function renderForecast(forecast) {
 
         `   <!-- 5 day forecast -->
 
-                <div id="week-forecast" class="week-forecast">
+                <div id="week-forecast" class="week-forecast d-flex flex-row justify-content-center">
                 <div id="week-forecast" class="card-body">   
                 <h2>(${todaysDate})</h2>
                 <p>Temp: ${temp}°F</p> 
