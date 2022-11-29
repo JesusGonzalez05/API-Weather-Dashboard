@@ -32,7 +32,10 @@ To create a pull request:
 6. Create a pull request on GitHub.
 
 ## Screenshots and Link
-will upload screen shots at a later time.
+<img width="1440" alt="Screenshot 2022-11-28 at 10 29 36 PM" src="https://user-images.githubusercontent.com/98119774/204432139-10c64b7b-7781-49bc-a4ed-d41f9469d818.png">
+
+<img width="1440" alt="Screenshot 2022-11-28 at 10 29 43 PM" src="https://user-images.githubusercontent.com/98119774/204432149-ca04a55c-b3dd-48c3-b9b6-30cab1b76e90.png">
+
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br />
