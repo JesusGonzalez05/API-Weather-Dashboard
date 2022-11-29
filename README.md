@@ -13,7 +13,7 @@ This fun and creative website utilizes Javascript CSS and HTML to pull from a RE
 
 ## Installations
 This app is deployeed on Github Pages!<br>
-[API Weather Dashboard](link once its been deployed)
+[API Weather Dashboard](https://jesusgonzalez05.github.io/API-Weather-Dashboard/)
 
 ## Usage
 Technologies utilized in this app include: <br>
