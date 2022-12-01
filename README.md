@@ -18,8 +18,8 @@ This app is deployeed on Github Pages!<br>
 ## Usage
 Technologies utilized in this app include: <br>
 ![Javascript](https://img.shields.io/badge/-Javascript-black?style=flat-square&logo=javascript)<br>
-![HTML](https://img.shields.io/badge/-html-black?style=flat-square&logo=html)<br>
-![CSS-handlebars](https://img.shields.io/badge/-css-black?style=flat-square&logo=css)<br>
+![HTML5](https://img.shields.io/badge/-html-black?style=flat-square&logo=HTML5)<br>
+![CSS3](https://img.shields.io/badge/-css-black?style=flat-square&logo=CSS3)<br>
 
 ## Contributing
 If you have any good ideas or changes you want to share, you can create a pull request or add issues to the repository. You can also contact us using the information in the [Questions](#questions) section.<br />
